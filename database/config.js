@@ -1,0 +1,34 @@
+const axios = require('axios');
+
+module.exports = {
+  tokens: "8249796635:AAEEblLkuXPrepLD6SFr9ilo5gN5R0Zw1Pc",  // Masukin Bot token kamu
+  owners: "7979381685", // Masukin ID Telegram kamu
+  port: "2000", // Masukin Port panel kamu 
+  ipvps: "https://death.kapotidoffc.cyou", // Masukin IP vps kamu atau domain panel kamu yg asalnya ( https://AiiSigma.id ) menjadi ( http://AiiSigma.id )
+
+  // Bot Appearance & Settings (Move here for easier renaming/encrypted index.js)
+  botSettings: {
+    botName: "𝖨𝖭𝖣𝖨𝖢𝖳𝖨V𝖤 𝖢𝖮𝖱𝖤",
+    startImage: 'https://files.catbox.moe/j5k0yy.jpg',
+    footerText: "𝐒𝐢𝐗 ☊ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧",
+    footerLink: "https://t.me/AiiSigma",
+
+    // Poll Menu Settings
+    pollTitle: '🌜 Pilih Menu yang Diinginkan',
+    pollOptions: ['🔑 sᴇᴛᴛɪɴɢs ᴍᴇɴᴜ', '🔧 ᴏᴡɴᴇʀ ᴍᴇɴᴜ', '📊 sᴇssɪᴏɴ sᴛᴀᴛᴜs', '❌ ᴄᴀɴᴄᴇʟ'],
+
+    // Devs / Links buttons
+    buttons: [
+      { text: 'ϟ', url: 'https://t.me/AiiSigma' },
+      { text: '🍷', url: 'https://t.me/N3xithCore' }
+    ]
+  },
+
+  // Dynamic Functions for Messages
+  messages: {
+    getStartCaption: (username, settings) => {
+      // You can edit the HTML/style here
+      return `<blockquote><b>${settings.botName}</b></blockquote>\nWelcome, @${username}\n\n<blockquote><a href="${settings.footerLink}">${settings.footerText}</a></blockquote>`;
+    }
+  }
+};
